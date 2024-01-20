@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Repositories</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container mt-4">
+        <h2>Github Repositories</h2>
+        <div class="form-group">
+            <label for="username">Enter Github Username:</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter username">
+        </div>
+        <div class="form-group">
+            <label for="search">Search Repositories:</label>
+            <input type="text" class="form-control" id="search" placeholder="Enter repository name">
+        </div>
+        <button class="btn btn-primary" onclick="getRepositories()">Get Repositories</button>
+
+        <div id="loader" class="mt-4" style="display: none;">
+            <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+
+        <div id="repositories" class="mt-4"></div>
+
+        <div id="pagination" class="mt-4"></div>
+        
+    </div>
+    
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
